@@ -2,8 +2,9 @@ module control_fsm (
     input wire clk,
     input wire reset,
     input wire [7:0] instruction,       // From instruction ROM
-    input wire [7:0] acc_data,          // From accumulator (for JZ decision)
-
+    //input wire [7:0] acc_data,          // From accumulator (for JZ decision)
+    input wire zero_flag,
+    
     output reg [1:0] alu_op,            // To ALU
     output reg acc_write,               // Load ACC
     output reg mem_read,                // Enable RAM read
@@ -58,8 +59,10 @@ module control_fsm (
             3'b101: begin // JMP
                 pc_write  = 1;
             end
+
             3'b110: begin // JZ
-                if (acc_data == 8'b00000000)
+                //if (acc_data == 8'b00000000)
+                if (zero_flag)
                     pc_write = 1;
             end
             3'b111: begin // OUT
