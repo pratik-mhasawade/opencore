@@ -24,4 +24,7 @@ module data_memory (
             mem[addr] <= write_data;
     end
 
+    initial begin
+        $readmemh("data.mem", mem);
+    end
 endmodule
