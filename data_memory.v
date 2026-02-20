@@ -11,7 +11,7 @@ module data_memory (
     reg [7:0] mem [0:31];
 
     // Read
-    always @(*) begin
+    always @(posedge clk) begin
         if (read_enable)
             read_data = mem[addr];
         else
