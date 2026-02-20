@@ -11,7 +11,8 @@ module control_fsm (
     output reg pc_write,               // Enable PC jump
     output reg uart_send,              // Enable UART output
     output reg [4:0] mem_addr,         // RAM address
-    output reg [4:0] new_pc            // Jump target
+    output reg [4:0] new_pc,            // Jump target
+    output reg load_sel
 );
 
     // FSM states (for simplicity, 1-stage execution per instruction)
@@ -20,6 +21,7 @@ module control_fsm (
 
     always @(*) begin
         // Default values
+        load_sel = 0;
         alu_op      = 2'b00;
         acc_write   = 0;
         mem_read    = 0;
@@ -38,6 +40,7 @@ module control_fsm (
             3'b001: begin // LOAD
                 mem_read  = 1;
                 acc_write = 1;
+                load_sel  = 1;   // <-- IMPORTANT
             end
             3'b010: begin // STORE
                 mem_write = 1;
