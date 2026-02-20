@@ -2,7 +2,7 @@ module top (
     input wire clk,
     input wire reset
 );
-
+    wire zero_flag;
     // Wires to connect modules
     wire [4:0] pc;
     wire [7:0] instruction;
@@ -22,6 +22,14 @@ module top (
     wire [4:0] new_pc;
 
     wire [7:0] alu_result;
+
+
+    flags flag_unit (
+    .clk(clk),
+    .reset(reset),
+    .alu_result(alu_result),
+    .zero_flag(zero_flag)
+    );
 
     
     // PC module: program counter
