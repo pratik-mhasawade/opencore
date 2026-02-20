@@ -9,6 +9,9 @@ module top (
     wire [7:0] acc_data;
     wire [7:0] mem_data;
 
+    wire [7:0] acc_input;
+    wire load_sel;
+
     wire [1:0] alu_op;
     wire acc_write;
     wire mem_read;
@@ -20,6 +23,7 @@ module top (
 
     wire [7:0] alu_result;
 
+    
     // PC module: program counter
     pc program_counter (
         .clk(clk),
@@ -69,12 +73,14 @@ module top (
         .result(alu_result)
     );
 
+
+    assign acc_input = (load_sel) ? mem_data : alu_result;
     // Accumulator
     accumulator acc (
         .clk(clk),
         .reset(reset),
         .write_enable(acc_write),
-        .data_in(alu_result),
+        .data_in(acc_input),
         .data_out(acc_data)
     );
 
