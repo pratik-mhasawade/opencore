@@ -8,21 +8,21 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 **OpenCore** is a structured, educational, and extensible open-source project focused on **processor design and frontend VLSI flow**.
 It starts from a simple 8-bit CPU and evolves step-by-step into a **modern pipelined architecture**, while demonstrating **industry-relevant design methodologies**.
 
 This project is designed to:
 
-* 📚 Help students learn CPU design from first principles
-* 🧠 Bridge the gap between theory and RTL implementation
-* 🏗️ Demonstrate a complete frontend design flow used in industry
-* 🌍 Encourage open-source collaboration in hardware design
+*  Help students learn CPU design from first principles
+*  Bridge the gap between theory and RTL implementation
+*  Demonstrate a complete frontend design flow used in industry
+*  Encourage open-source collaboration in hardware design
 
 ---
 
-## 🏗️ Design Flow Coverage
+##  Design Flow Coverage
 
 OpenCore aims to cover the **complete frontend design stack**:
 
@@ -36,15 +36,15 @@ Gate-Level Simulation (GLS) → DFT (Conceptual)
 
 ---
 
-## 🚀 Project Status
+##  Project Status
 
-🚧 Actively under development
-✅ Phase 0: Stable single-cycle CPU (baseline RTL)
-🔜 Next: Multi-cycle FSM-based CPU
+ Actively under development
+ Phase 0: Stable single-cycle CPU (baseline RTL)
+ Phase 1: Multi-cycle FSM-based CPU
 
 ---
 
-## 🧩 Key Features
+##  Key Features
 
 * 8-bit RISC-style processor (initial version)
 * Modular RTL design (Verilog)
@@ -72,7 +72,7 @@ opencore/
 
 ---
 
-## 🏷️ Badges
+##  Badges
 
 ![Status](https://img.shields.io/badge/status-active--development-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -98,11 +98,11 @@ This project is designed to be beginner-friendly and collaborative.
 * Enhance documentation
 * Build pipeline stages
 
-👉 See `CONTRIBUTING.md` (coming soon)
+ See `CONTRIBUTING.md` (coming soon)
 
 ---
 
-## ⭐ Support
+##  Support
 
 If you find this project useful:
 
@@ -115,10 +115,10 @@ If you find this project useful:
 ## 👨‍💻 Author
 
 **Pratik Mhasawade**
-VLSI & Computer Architecture Enthusiast
+VLSI Enthusiast
 
 ---
 
-## 📜 License
+##  License
 
 This project is licensed under the **MIT License**.
